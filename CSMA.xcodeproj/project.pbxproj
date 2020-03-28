@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F144022E242B16CD005D055E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F144022D242B16CD005D055E /* main.cpp */; };
+		F144023C242B9A53005D055E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F144023B242B9A53005D055E /* main.cpp */; };
+		F144023F242B9A83005D055E /* Bus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F144023D242B9A83005D055E /* Bus.cpp */; };
+		F1440242242B9DF4005D055E /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1440240242B9DF4005D055E /* Node.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +26,12 @@
 
 /* Begin PBXFileReference section */
 		F144022A242B16CD005D055E /* CSMA */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CSMA; sourceTree = BUILT_PRODUCTS_DIR; };
-		F144022D242B16CD005D055E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F144023A242B29D3005D055E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F144023B242B9A53005D055E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F144023D242B9A83005D055E /* Bus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bus.cpp; sourceTree = "<group>"; };
+		F144023E242B9A83005D055E /* Bus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Bus.hpp; sourceTree = "<group>"; };
+		F1440240242B9DF4005D055E /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		F1440241242B9DF4005D055E /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +48,7 @@
 		F1440221242B16CD005D055E = {
 			isa = PBXGroup;
 			children = (
+				F144023A242B29D3005D055E /* README.md */,
 				F144022C242B16CD005D055E /* CSMA */,
 				F144022B242B16CD005D055E /* Products */,
 			);
@@ -57,7 +65,11 @@
 		F144022C242B16CD005D055E /* CSMA */ = {
 			isa = PBXGroup;
 			children = (
-				F144022D242B16CD005D055E /* main.cpp */,
+				F144023B242B9A53005D055E /* main.cpp */,
+				F144023D242B9A83005D055E /* Bus.cpp */,
+				F144023E242B9A83005D055E /* Bus.hpp */,
+				F1440240242B9DF4005D055E /* Node.cpp */,
+				F1440241242B9DF4005D055E /* Node.hpp */,
 			);
 			path = CSMA;
 			sourceTree = "<group>";
@@ -119,7 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F144022E242B16CD005D055E /* main.cpp in Sources */,
+				F1440242242B9DF4005D055E /* Node.cpp in Sources */,
+				F144023F242B9A83005D055E /* Bus.cpp in Sources */,
+				F144023C242B9A53005D055E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

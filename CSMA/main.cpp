@@ -7,9 +7,15 @@
 //
 
 #include <iostream>
+#include "Bus.hpp"
+#include "Node.hpp"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+
+int main() {
+    Bus bus;
+    Node a(&bus), b(&bus);
+    a.start("I can eat the glass, it doesn't hurt me.");
+    b.start("The quick brown fox jumps over the lazy dog.");
+    bus.start();
     return 0;
 }
