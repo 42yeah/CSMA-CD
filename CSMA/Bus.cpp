@@ -20,7 +20,7 @@ bool sleep(long nanos) {
     return !((rem.tv_nsec != 0 || rem.tv_sec != 0));
 }
 
-void Bus::start() { 
+void Bus::start() {
     running = true;
     while (running) {
         if (!sleep(BITNANOS)) {

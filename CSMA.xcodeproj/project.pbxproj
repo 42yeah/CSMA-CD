@@ -10,6 +10,15 @@
 		F144023C242B9A53005D055E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F144023B242B9A53005D055E /* main.cpp */; };
 		F144023F242B9A83005D055E /* Bus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F144023D242B9A83005D055E /* Bus.cpp */; };
 		F1440242242B9DF4005D055E /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1440240242B9DF4005D055E /* Node.cpp */; };
+		F186609B2498C24000D2C672 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F186609A2498C24000D2C672 /* main.cpp */; };
+		F18660A32498C2D200D2C672 /* libsfml-system.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F18660A02498C2D200D2C672 /* libsfml-system.2.5.1.dylib */; };
+		F18660A42498C2D200D2C672 /* libsfml-system.2.5.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = F18660A02498C2D200D2C672 /* libsfml-system.2.5.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F18660A52498C2D200D2C672 /* libsfml-window.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F18660A12498C2D200D2C672 /* libsfml-window.2.5.1.dylib */; };
+		F18660A62498C2D200D2C672 /* libsfml-window.2.5.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = F18660A12498C2D200D2C672 /* libsfml-window.2.5.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F18660A72498C2D200D2C672 /* libsfml-graphics.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F18660A22498C2D200D2C672 /* libsfml-graphics.2.5.1.dylib */; };
+		F18660A82498C2D200D2C672 /* libsfml-graphics.2.5.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = F18660A22498C2D200D2C672 /* libsfml-graphics.2.5.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F18660B22498D16900D2C672 /* Bus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F18660B02498D16900D2C672 /* Bus.cpp */; };
+		F18660B52498D1B800D2C672 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F18660B32498D1B800D2C672 /* Node.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -22,6 +31,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		F18660962498C24000D2C672 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F18660A92498C2D200D2C672 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F18660A62498C2D200D2C672 /* libsfml-window.2.5.1.dylib in Embed Libraries */,
+				F18660A42498C2D200D2C672 /* libsfml-system.2.5.1.dylib in Embed Libraries */,
+				F18660A82498C2D200D2C672 /* libsfml-graphics.2.5.1.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +63,15 @@
 		F144023E242B9A83005D055E /* Bus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Bus.hpp; sourceTree = "<group>"; };
 		F1440240242B9DF4005D055E /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
 		F1440241242B9DF4005D055E /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		F18660982498C24000D2C672 /* UI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UI; sourceTree = BUILT_PRODUCTS_DIR; };
+		F186609A2498C24000D2C672 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F18660A02498C2D200D2C672 /* libsfml-system.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-system.2.5.1.dylib"; path = "../../../../../usr/local/Cellar/sfml/2.5.1/lib/libsfml-system.2.5.1.dylib"; sourceTree = "<group>"; };
+		F18660A12498C2D200D2C672 /* libsfml-window.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-window.2.5.1.dylib"; path = "../../../../../usr/local/Cellar/sfml/2.5.1/lib/libsfml-window.2.5.1.dylib"; sourceTree = "<group>"; };
+		F18660A22498C2D200D2C672 /* libsfml-graphics.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-graphics.2.5.1.dylib"; path = "../../../../../usr/local/Cellar/sfml/2.5.1/lib/libsfml-graphics.2.5.1.dylib"; sourceTree = "<group>"; };
+		F18660B02498D16900D2C672 /* Bus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bus.cpp; sourceTree = "<group>"; };
+		F18660B12498D16900D2C672 /* Bus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Bus.hpp; sourceTree = "<group>"; };
+		F18660B32498D1B800D2C672 /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		F18660B42498D1B800D2C672 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,15 +82,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F18660952498C24000D2C672 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F18660A52498C2D200D2C672 /* libsfml-window.2.5.1.dylib in Frameworks */,
+				F18660A32498C2D200D2C672 /* libsfml-system.2.5.1.dylib in Frameworks */,
+				F18660A72498C2D200D2C672 /* libsfml-graphics.2.5.1.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		F1440221242B16CD005D055E = {
 			isa = PBXGroup;
 			children = (
+				F18660AE2498C6D800D2C672 /* Assets */,
 				F144023A242B29D3005D055E /* README.md */,
 				F144022C242B16CD005D055E /* CSMA */,
+				F18660992498C24000D2C672 /* UI */,
 				F144022B242B16CD005D055E /* Products */,
+				F186609F2498C2D100D2C672 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				F144022A242B16CD005D055E /* CSMA */,
+				F18660982498C24000D2C672 /* UI */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +126,35 @@
 				F1440241242B9DF4005D055E /* Node.hpp */,
 			);
 			path = CSMA;
+			sourceTree = "<group>";
+		};
+		F18660992498C24000D2C672 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F186609A2498C24000D2C672 /* main.cpp */,
+				F18660B02498D16900D2C672 /* Bus.cpp */,
+				F18660B12498D16900D2C672 /* Bus.hpp */,
+				F18660B32498D1B800D2C672 /* Node.cpp */,
+				F18660B42498D1B800D2C672 /* Node.hpp */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F186609F2498C2D100D2C672 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F18660A22498C2D200D2C672 /* libsfml-graphics.2.5.1.dylib */,
+				F18660A02498C2D200D2C672 /* libsfml-system.2.5.1.dylib */,
+				F18660A12498C2D200D2C672 /* libsfml-window.2.5.1.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F18660AE2498C6D800D2C672 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,17 +177,39 @@
 			productReference = F144022A242B16CD005D055E /* CSMA */;
 			productType = "com.apple.product-type.tool";
 		};
+		F18660972498C24000D2C672 /* UI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F186609C2498C24000D2C672 /* Build configuration list for PBXNativeTarget "UI" */;
+			buildPhases = (
+				F18660952498C24000D2C672 /* Frameworks */,
+				F18660962498C24000D2C672 /* CopyFiles */,
+				F18660A92498C2D200D2C672 /* Embed Libraries */,
+				F18660942498C24000D2C672 /* Sources */,
+				F18660AF2498C71900D2C672 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UI;
+			productName = UI;
+			productReference = F18660982498C24000D2C672 /* UI */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F1440222242B16CD005D055E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = aiofwa;
 				TargetAttributes = {
 					F1440229242B16CD005D055E = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					F18660972498C24000D2C672 = {
+						CreatedOnToolsVersion = 11.5;
 					};
 				};
 			};
@@ -122,9 +227,30 @@
 			projectRoot = "";
 			targets = (
 				F1440229242B16CD005D055E /* CSMA */,
+				F18660972498C24000D2C672 /* UI */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F18660AF2498C71900D2C672 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# ln -s ${SRCROOT}/Assets ${BUILT_PRODUCTS_DIR}/Assets\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F1440226242B16CD005D055E /* Sources */ = {
@@ -134,6 +260,16 @@
 				F1440242242B9DF4005D055E /* Node.cpp in Sources */,
 				F144023F242B9A83005D055E /* Bus.cpp in Sources */,
 				F144023C242B9A53005D055E /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F18660942498C24000D2C672 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F18660B22498D16900D2C672 /* Bus.cpp in Sources */,
+				F186609B2498C24000D2C672 /* main.cpp in Sources */,
+				F18660B52498D1B800D2C672 /* Node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,8 +388,9 @@
 		F1440232242B16CD005D055E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KL2JALR869;
+				DEVELOPMENT_TEAM = 73G2KN78GM;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -262,9 +399,38 @@
 		F1440233242B16CD005D055E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KL2JALR869;
+				DEVELOPMENT_TEAM = 73G2KN78GM;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F186609D2498C24000D2C672 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/sfml/2.5.1/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sfml/2.5.1/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F186609E2498C24000D2C672 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/sfml/2.5.1/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sfml/2.5.1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -286,6 +452,15 @@
 			buildConfigurations = (
 				F1440232242B16CD005D055E /* Debug */,
 				F1440233242B16CD005D055E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F186609C2498C24000D2C672 /* Build configuration list for PBXNativeTarget "UI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F186609D2498C24000D2C672 /* Debug */,
+				F186609E2498C24000D2C672 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
