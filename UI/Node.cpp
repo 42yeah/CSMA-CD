@@ -23,6 +23,7 @@ Node::Node(Bus *bus) : bus(bus) {
     delay = 96;
     ptr = 0;
     attempts = 0;
+    sent = 0;
 }
 
 void Node::update() {
@@ -44,20 +45,13 @@ void Node::update() {
                 
             case WARNING:
                 state = IDLE;
+                attempts++;
                 std::uniform_int_distribution<> distrib(0, pow(attempts, 2) * 10);
                 std::random_device dev;
                 delay = distrib(dev);
                 bus->channel = -1;
                 break;
         }
-        return;
-    }
-    if (bus->channel == -2 && state != WARNING && state != IDLE) {
-        attempts++;
-        state = IDLE;
-        std::uniform_int_distribution<> distrib(0, pow(attempts, 2) * 10);
-        std::random_device dev;
-        delay = distrib(dev);
         return;
     }
     switch (state) {
@@ -69,7 +63,7 @@ void Node::update() {
             break;
             
         case SENDING:
-            if (ptr != 0 && (bus->channel != buffer[ptr - 1] && bus->channel != -1)) {
+            if ((ptr != 0 && (bus->channel != buffer[ptr - 1] && bus->channel != -1)) || bus->channel == -2) {
                 // JAMMED!
                 state = WARNING;
                 delay = JAM_BITS;
@@ -80,6 +74,7 @@ void Node::update() {
                 bus->channel = -1;
                 delay = 96;
                 attempts = 0;
+                sent++;
                 break;
             }
             bus->channel = buffer[ptr];

@@ -51,6 +51,7 @@ int main(int argc, const char * argv[]) {
     sf::View view;
     view.setCenter(size.x * 0.5f, size.y * 0.5f);
     view.setSize(window.getSize().x, window.getSize().y);
+    bool updating = false;
     
     std::map<sf::Keyboard::Key, bool> keyMap;
     float time = 0.0f;
@@ -63,7 +64,7 @@ int main(int argc, const char * argv[]) {
         clock.restart();
         
         time += deltaTime;
-        if (time >= updateInterval) {
+        if (time >= updateInterval && updating) {
             for (int i = 0; i < nodes.size(); i++) {
                 nodes[i].update();
             }
@@ -78,6 +79,13 @@ int main(int argc, const char * argv[]) {
                     updateInterval *= 0.5f;
                 } else if (e.key.code == sf::Keyboard::R) {
                     updateInterval *= 2.0f;
+                } else if (e.key.code == sf::Keyboard::M) {
+                    nodes.push_back(Node(&bus));
+                } else if (e.key.code == sf::Keyboard::N) {
+                    nodes.erase(nodes.begin(), nodes.begin() + 1);
+                    bus.channel = -1;
+                } else if (e.key.code == sf::Keyboard::Space) {
+                    updating = !updating;
                 }
             }
             if (e.type == sf::Event::KeyReleased) {
@@ -113,6 +121,7 @@ int main(int argc, const char * argv[]) {
         for (int i = 0; i < nodes.size(); i++) {
             Node &node = nodes[i];
             sf::Color color;
+            sf::Color lineColor = idle;
             switch (node.state) {
                 case LISTENING:
                     color = good;
@@ -120,10 +129,12 @@ int main(int argc, const char * argv[]) {
                     
                 case SENDING:
                     color = busy;
+                    lineColor = busy;
                     break;
                     
                 case WARNING:
                     color = warning;
+                    lineColor = warning;
                     break;
                     
                 case IDLE:
@@ -151,7 +162,7 @@ int main(int argc, const char * argv[]) {
             sf::RectangleShape line;
             line.setPosition(shape.getPosition().x + SHAPE / 2.0f - 2.5f, shape.getPosition().y + shape.getSize().y);
             line.setSize({ 5.0f, 100.0f });
-            line.setFillColor(idle);
+            line.setFillColor(lineColor);
             
             window.draw(line);
             window.draw(shape);
@@ -168,23 +179,23 @@ int main(int argc, const char * argv[]) {
         sf::RectangleShape line;
         line.setPosition(firstX + SHAPE / 2.0f - 2.5f, (float) size.y * 0.4f + SHAPE + 100.0f);
         line.setSize({ lastX - firstX + 200.0f, 5.0f });
-        line.setFillColor(idle);
-        
-        sf::RectangleShape output;
-        output.setPosition(line.getPosition().x + line.getSize().x, line.getPosition().y - 30.0f);
-        output.setSize({ 130.0f, 60.0f });
-        output.setOutlineColor(idle);
-        output.setOutlineThickness(5.0f);
         
         std::wstring outputStr;
+        sf::Color outline;
         switch (bus.channel) {
-            case -2: outputStr = L"拥塞"; break;
-            case -1: outputStr = L"空闲"; break;
-            default: outputStr = std::to_wstring(bus.channel); break;
+            case -2: outputStr = L"拥塞"; outline = warning; break;
+            case -1: outputStr = L"空闲"; outline = idle; break;
+            default: outputStr = std::to_wstring(bus.channel); outline = busy; break;
         }
+        line.setFillColor(outline);
+        sf::RectangleShape output;
+        output.setPosition(line.getPosition().x + line.getSize().x, line.getPosition().y - 30.0f);
+        output.setSize({ 105.0f, 60.0f });
+        output.setOutlineColor(outline);
+        output.setOutlineThickness(5.0f);
         sf::Text currentOutput(outputStr, noto);
         currentOutput.setPosition(output.getPosition().x + 21.0f, output.getPosition().y + 10.0f);
-        currentOutput.setFillColor(idle);
+        currentOutput.setFillColor(outline);
 
         window.draw(line);
         window.draw(output);
@@ -230,7 +241,8 @@ int main(int argc, const char * argv[]) {
             }
             sf::Text text(L"节点 " + std::to_wstring(info.index + 1) + L"\n" +
                           L"当前状态: " + state + L"\n" +
-                          L"还有 " + std::to_wstring(delay) + L" 比特时间完成\n", noto);
+                          L"还有 " + std::to_wstring(delay) + L" 比特时间完成\n" +
+                          L"已经成功发送 " + std::to_wstring(nodes[info.index].sent) + L" 个", noto);
             text.setFillColor(sf::Color::Black);
             text.setPosition(rect.getPosition().x + 20.0f, rect.getPosition().y + 20.0f);
             window.draw(text);

@@ -32,6 +32,7 @@ public:
     State state;
     int ptr;
     int attempts;
+    int sent;
 };
 
 #endif /* Node_hpp */

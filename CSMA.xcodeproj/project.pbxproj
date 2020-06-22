@@ -63,6 +63,7 @@
 		F144023E242B9A83005D055E /* Bus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Bus.hpp; sourceTree = "<group>"; };
 		F1440240242B9DF4005D055E /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
 		F1440241242B9DF4005D055E /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		F14720CC249B37020073BB18 /* noto.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = noto.otf; sourceTree = "<group>"; };
 		F18660982498C24000D2C672 /* UI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UI; sourceTree = BUILT_PRODUCTS_DIR; };
 		F186609A2498C24000D2C672 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F18660A02498C2D200D2C672 /* libsfml-system.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-system.2.5.1.dylib"; path = "../../../../../usr/local/Cellar/sfml/2.5.1/lib/libsfml-system.2.5.1.dylib"; sourceTree = "<group>"; };
@@ -153,6 +154,7 @@
 		F18660AE2498C6D800D2C672 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F14720CC249B37020073BB18 /* noto.otf */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
